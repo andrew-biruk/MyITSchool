@@ -1,0 +1,7 @@
+17:42:16 - INFO - line 26 - Successfully executed: extractor(test1.txt)
+17:42:16 - INFO - line 26 - Successfully executed: extractor(test2.txt)
+17:42:16 - ERROR - line 41 - [Errno 2] No such file or directory: 'test3.txt'
+17:42:16 - INFO - line 26 - Successfully executed: extractor(test1.txt)
+17:42:16 - INFO - line 31 - Copy of duplicate item created: test1_duplicate.txt
+17:42:16 - INFO - line 26 - Successfully executed: extractor(fil.csv)
+17:42:16 - INFO - line 53 - Data saved to files_info.json

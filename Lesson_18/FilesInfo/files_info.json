@@ -1,0 +1,22 @@
+{
+    "test1.txt": {
+        "path": "/home/zabulaj/Desktop/MyITSchool/Lesson_18/FilesInfo/test1.txt",
+        "extension": ".txt",
+        "size": "342 bytes"
+    },
+    "test2.txt": {
+        "path": "/home/zabulaj/Desktop/MyITSchool/Lesson_18/FilesInfo/test2.txt",
+        "extension": ".txt",
+        "size": "54 bytes"
+    },
+    "test1_duplicate.txt": {
+        "path": "/home/zabulaj/Desktop/MyITSchool/Lesson_18/FilesInfo/test1_duplicate.txt",
+        "extension": ".txt",
+        "size": "342 bytes"
+    },
+    "fil.csv": {
+        "path": "/home/zabulaj/Desktop/MyITSchool/Lesson_18/FilesInfo/fil.csv",
+        "extension": ".csv",
+        "size": "0 bytes"
+    }
+}
