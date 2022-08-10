@@ -1,6 +1,5 @@
 """
-Создать 2 таблицы в Базе Данных
-Одна будет хранить текстовые данные (1 колонка), другая числовые (1 колонка).
+Создать 2 таблицы в Базе Данных Одна будет хранить текстовые данные (1 колонка), другая числовые (1 колонка).
 Есть список, состоящий из чисел и слов.
 1) Если элемент списка - слово, то записать его в соответствующую таблицу,
 затем посчитать длину слова и записать её в числовую таблицу
@@ -21,11 +20,11 @@ cu.executescript("""
     """)
 cx.commit()
 
+# 1ST & 2ND TASKS:
 for i in [5, "banana", 7, "apple", 3, 4, 9, "orange", "chery"]:
     if isinstance(i, int):
         cu.execute("""
-        INSERT INTO {0}(col) 
-        VALUES('{1}');
+        INSERT INTO {0}(col) VALUES('{1}');
         """.format(*[('tab1', i), ('tab2', 'odd')][i % 2]))
     elif isinstance(i, str):
         cu.executescript(f"""
@@ -33,6 +32,7 @@ for i in [5, "banana", 7, "apple", 3, 4, 9, "orange", "chery"]:
         INSERT INTO tab1(col) VALUES('{len(i)}');
         """)
 
+# 3RD TASK:
 cu.execute(
     ["UPDATE tab2 SET col='hello' WHERE id=1;",
      "DELETE FROM tab2 WHERE id=1;"][cu.execute("SELECT COUNT(*) FROM tab1").fetchone()[0] > 5])
@@ -42,4 +42,5 @@ for i in zip_longest(cu.execute("SELECT * FROM tab1").fetchall(),
                      cu.execute("SELECT * FROM tab2").fetchall(),
                      fillvalue='(    )'):
     print(*i)
+
 cx.close()
